@@ -1,2 +1,6 @@
 .footer {
 }
+.footer__title {
+  color: white;
+  margin: 0;
+}

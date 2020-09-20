@@ -1,4 +1,5 @@
 .root {
   text-align: center;
-  background-color: #033e6b;  
+  background-color: #033e6b;
+  min-height: 100vh;
 }
