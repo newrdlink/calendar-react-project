@@ -1,27 +1,29 @@
 import React from "react";
 import "./Main.css";
-import Month from "../Month/Month";
-import { useEffect, useState } from "react";
-import api from "../utils/Api/Api";
+import Users from "../Users/Users";
+import { Route, Switch } from "react-router-dom";
+import About from "../About/About";
 
 function Main() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    api.getAppStartInfo().then((res) => {
-      const [usersBackend] = res;
-      setUsers(usersBackend);
-    });
-  }, []);
-
   return (
     <main className="main">
-      <div className="main__container">
-        {users.map((user, i) => (
-          <Month key={i} user={user} />
-        ))}
-        <h2 className="main__title">Main container</h2>
-      </div>
+      <Switch>
+        <Route exact path="/">
+          <About />
+        </Route>
+        <Route path="/interesting">
+          <Users />
+        </Route>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/add-event">
+          <Users />
+        </Route>
+        <Route path="/our-time">
+          <Users />
+        </Route>
+      </Switch>
     </main>
   );
 }

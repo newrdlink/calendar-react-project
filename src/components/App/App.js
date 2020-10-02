@@ -3,10 +3,11 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="root">
+    <div className="app">
       <Header />
       <Main />
       <Footer />
