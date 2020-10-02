@@ -1,3 +1,6 @@
 .header {
   background-color: #033e6b;
+  display: flex;
+  flex-direction: row;
+  color: antiquewhite;
 }

@@ -1,9 +1,10 @@
 import React from "react";
 
-function Month(data) {
+function Month(user) {
   return (
     <div className="Month">
-      <h3 className="month__title">{data.data.name}hgfh</h3>
+      <h3 className="month__title">{user.user.name}</h3>
+      
     </div>
   );
 }

@@ -9,16 +9,16 @@ function Main() {
 
   useEffect(() => {
     api.getAppStartInfo().then((res) => {
-      setUsers(res);
+      const [usersBackend] = res;
+      setUsers(usersBackend);
     });
   }, []);
 
-  console.log(users);
   return (
     <main className="main">
       <div className="main__container">
         {users.map((user, i) => (
-          <Month key={i} data={user} />
+          <Month key={i} user={user} />
         ))}
         <h2 className="main__title">Main container</h2>
       </div>
