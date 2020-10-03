@@ -6,10 +6,11 @@ import "./Header.css";
 
 function Header() {
   return (
-    <Header className="header">
+    <header className="header">
       <Logo />
       <CurrenYear />
-    </Header>
+      <Nav place={"header"} />
+    </header>
   );
 }
 

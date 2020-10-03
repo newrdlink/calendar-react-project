@@ -1,36 +1,21 @@
 import React from "react";
 import "./Nav.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { menuList } from "../utils/InitialData";
 
-export default function Nav() {
-  let menu = [
-    {
-      title: "О доске",
-      link: "/",
-    },
-    {
-      title: "Интересное",
-      link: "/interesting",
-    },
-    {
-      title: "Пользователи",
-      link: "/users",
-    },
-    {
-      title: "Добавить событие",
-      link: "/add-event",
-    },
-    {
-      title: "Наше время",
-      link: "/our-time",
-    },
-  ];
-
+export default function Nav(place) {
   return (
-    <ul className="nav">
-      {menu.map((item) => (
-        <li className="nav__item">
-          <Link to={`${item.title}`}></Link>
+    <ul className={`nav ${"nav_pos_footer"}`}>
+      {menuList.map((item) => (
+        <li key={item.id} className="nav__item">
+          <NavLink
+            exact={item.id === 1 && true}
+            activeClassName="nav__link_active"
+            className="nav__link"
+            to={`${item.link}`}
+          >
+            {item.title}
+          </NavLink>
         </li>
       ))}
     </ul>

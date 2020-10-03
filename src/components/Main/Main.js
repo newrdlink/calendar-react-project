@@ -3,6 +3,8 @@ import "./Main.css";
 import Users from "../Users/Users";
 import { Route, Switch } from "react-router-dom";
 import About from "../About/About";
+import Developments from "../Developments/Developments";
+import AddEvent from "../AddEvent/AddEvent";
 
 function Main() {
   return (
@@ -12,13 +14,13 @@ function Main() {
           <About />
         </Route>
         <Route path="/interesting">
-          <Users />
+          <Developments />
         </Route>
         <Route path="/users">
           <Users />
         </Route>
         <Route path="/add-event">
-          <Users />
+          <AddEvent />
         </Route>
         <Route path="/our-time">
           <Users />

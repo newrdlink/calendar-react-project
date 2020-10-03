@@ -1,7 +1,6 @@
 import React from "react";
+import "./CurrentYear.css"
 
 export default function CurrenYear() {
-  const currentDate = new Date();
-
-  return <h3>{currentDate.getFullYear()}</h3>;
+  return <h3 className="currentYear">{new Date().getFullYear()}</h3>;
 }

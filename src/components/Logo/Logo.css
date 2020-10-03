@@ -1,7 +1,7 @@
 .logo {
+  padding: 10px 0 25px 50px;
 }
 
-.logo__title {
-  color: white;
-  margin: 0;
+.logo__image {
+  max-width: 80px;
 }

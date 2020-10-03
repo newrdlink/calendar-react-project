@@ -1,10 +1,11 @@
 import React from "react";
 import "./Logo.css";
+import logoImage from "../../images/1.png";
 
 function Logo() {
   return (
     <div className="logo">
-      <h1 className="logo__title">Логотип</h1>
+      <img className="logo__image" src={logoImage} alt="Логотип" />
     </div>
   );
 }

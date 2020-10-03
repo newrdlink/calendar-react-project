@@ -1,0 +1,10 @@
+.developments {
+  /*min-height: 200px;*/
+}
+
+.developments__items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

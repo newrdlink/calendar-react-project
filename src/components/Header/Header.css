@@ -3,4 +3,5 @@
   flex-direction: row;
   color: antiquewhite;
   justify-content: center;
+  border-bottom: 3px solid rgb(23, 49, 97);
 }

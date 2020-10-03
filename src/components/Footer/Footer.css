@@ -1,4 +1,8 @@
 .footer {
+  border-top: 3px solid rgb(23, 49, 97);
+  padding-top: 10px;  
+  display: flex;
+  align-items: center;
 }
 .footer__title {
   color: white;

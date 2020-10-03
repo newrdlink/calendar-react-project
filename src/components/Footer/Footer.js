@@ -1,10 +1,11 @@
 import React from "react";
+import Nav from "../Nav/Nav";
 import "./Footer.css";
 
 function Footer() {
   return (
     <div className="footer">
-      <h2 className="footer__title">Footer</h2>
+      <Nav place={"footer"} />
     </div>
   );
 }

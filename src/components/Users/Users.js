@@ -1,7 +1,7 @@
 import React from "react";
 import api from "../utils/Api/Api";
 import { useEffect, useState } from "react";
-import Month from "../Month/Month";
+import User from "../User/User";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -15,10 +15,9 @@ export default function Users() {
 
   return (
     <div className="main__container">
-      {users.map((user, i) => (
-        <Month key={i} user={user} />
-      ))}
-      <h2 className="main__title">Main container</h2>
+      {users.map((user, id) => (
+        <User key={id} user={user} />
+      ))}      
     </div>
   );
 }

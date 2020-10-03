@@ -1,12 +1,7 @@
 import React from "react";
+import "./Month.css";
 
-function Month(user) {
-  return (
-    <div className="Month">
-      <h3 className="month__title">{user.user.name}</h3>
-      
-    </div>
-  );
+export default function Month({ month }) {
+  //console.log(month);
+  return <img className="month" src={`${month.image}`} alt={`${month.name}`} />;
 }
-
-export default Month;
