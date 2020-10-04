@@ -17,7 +17,7 @@ export default function Users() {
     <div className="main__container">
       {users.map((user, id) => (
         <User key={id} user={user} />
-      ))}      
+      ))}
     </div>
   );
 }

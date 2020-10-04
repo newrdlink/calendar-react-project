@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
-      <Nav place={"footer"} />
+      <Nav place={"nav_pos_footer"} />
     </div>
   );
 }

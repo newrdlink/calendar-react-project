@@ -3,9 +3,9 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { menuList } from "../utils/InitialData";
 
-export default function Nav(place) {
+export default function Nav({place}) {  
   return (
-    <ul className={`nav ${"nav_pos_footer"}`}>
+    <ul className={`nav ${place}`}>
       {menuList.map((item) => (
         <li key={item.id} className="nav__item">
           <NavLink

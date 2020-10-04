@@ -9,7 +9,7 @@ function Header() {
     <header className="header">
       <Logo />
       <CurrenYear />
-      <Nav place={"header"} />
+      <Nav place={"nav_pos_header"} />
     </header>
   );
 }

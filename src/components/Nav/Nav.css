@@ -13,6 +13,10 @@
   margin: 0;
 }
 
+.nav_pos_header {
+  margin: 0;
+}
+
 .nav__item {
   margin-right: 15px;
 }
