@@ -18,7 +18,7 @@ class Api extends React.Component {
       return Promise.reject(`Извините, ошибка: ${res.status}`);
     });
   }
-  getNasaData() {
+  getNasaLastPhoto() {
     return fetch(
       "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=s1oWanfmfBm7knYE9gFtcB7PjliOiATRtCGVOb6H",
       {
