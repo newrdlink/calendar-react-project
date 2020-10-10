@@ -10,7 +10,7 @@ export default function AddEvent() {
   useEffect(() => {
     api.getNasaLastPhoto().then((res) => {
       const { latest_photos } = res;
-      const tenLatestPhoto = latest_photos.slice(0, 20);
+      const tenLatestPhoto = latest_photos.slice(0, 12);
       setFotoBackendNasa(tenLatestPhoto);
     });
   }, []);

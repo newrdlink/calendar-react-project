@@ -6,6 +6,7 @@ import About from "../About/About";
 import Developments from "../Developments/Developments";
 import AddEvent from "../AddEvent/AddEvent";
 
+
 function Main() {
   return (
     <main className="main">
@@ -25,7 +26,7 @@ function Main() {
         <Route path="/our-time">
           <Users />
         </Route>
-      </Switch>
+      </Switch>      
     </main>
   );
 }

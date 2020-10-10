@@ -5,7 +5,6 @@
 
 .image__image {
   width: 100%;
-  object-fit: contain;
-  margin: 10px;
+  object-fit: contain; 
   overflow: hidden;
 }
