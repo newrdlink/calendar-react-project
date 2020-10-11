@@ -2,11 +2,19 @@ import React from "react";
 import { useEffect, useState } from "react";
 import api from "../utils/Api/Api";
 import ImageFromNasa from "../ImageFromNasa/ImageFromNasa";
+import Popup from "../Popup/Popup";
 import "./AddEvent.css";
 
 export default function AddEvent() {
   const [fotoBackendNasa, setFotoBackendNasa] = useState([]);
-  const clickOnImage = (item) => console.log(item.id);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const closePopup = () => setIsPopupOpen(false);
+  const clickOnImage = (item) => {
+    setSelectedImage(item);
+  };
+
   useEffect(() => {
     api.getNasaLastPhoto().then((res) => {
       const { latest_photos } = res;
@@ -17,6 +25,7 @@ export default function AddEvent() {
 
   return (
     <div className="images">
+      <Popup isPopupOpen={isPopupOpen} />
       {fotoBackendNasa.map((item) => (
         <ImageFromNasa
           key={item.id}
