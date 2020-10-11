@@ -6,7 +6,7 @@ import "./AddEvent.css";
 
 export default function AddEvent() {
   const [fotoBackendNasa, setFotoBackendNasa] = useState([]);
-
+  const clickOnImage = (item) => console.log(item.id);
   useEffect(() => {
     api.getNasaLastPhoto().then((res) => {
       const { latest_photos } = res;
@@ -18,13 +18,11 @@ export default function AddEvent() {
   return (
     <div className="images">
       {fotoBackendNasa.map((item) => (
-        <ImageFromNasa key={item.id} image={item}>
-          {/* <img
-            className="image__image"
-            alt={item.camera.full_name}
-            src={item.img_src}
-          /> */}
-        </ImageFromNasa>
+        <ImageFromNasa
+          key={item.id}
+          image={item}
+          clickOnImage={() => clickOnImage(item)}
+        ></ImageFromNasa>
       ))}
     </div>
   );
