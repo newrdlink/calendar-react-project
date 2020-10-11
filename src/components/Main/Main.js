@@ -6,8 +6,10 @@ import About from "../About/About";
 import Developments from "../Developments/Developments";
 import AddEvent from "../AddEvent/AddEvent";
 
-
 function Main() {
+  const clickImageNasa = () => {
+    console.log('fge');
+  };
   return (
     <main className="main">
       <Switch>
@@ -21,12 +23,12 @@ function Main() {
           <Users />
         </Route>
         <Route path="/add-event">
-          <AddEvent />
+          <AddEvent onClick={clickImageNasa} />
         </Route>
         <Route path="/our-time">
           <Users />
         </Route>
-      </Switch>      
+      </Switch>
     </main>
   );
 }

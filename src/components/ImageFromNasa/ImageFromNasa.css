@@ -1,10 +1,16 @@
 .image__container {
   width: 200px;
-  height: 200px;
+  max-height: 200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 10px;
   border-radius: 15px;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.image__image {
+  width: 100%;
+  object-fit: contain;
   overflow: hidden;
 }

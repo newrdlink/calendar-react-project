@@ -14,16 +14,16 @@ export default function AddEvent() {
       setFotoBackendNasa(tenLatestPhoto);
     });
   }, []);
-  console.log(fotoBackendNasa);
+
   return (
     <div className="images">
       {fotoBackendNasa.map((item) => (
-        <ImageFromNasa key={item.id}>
-          <img
+        <ImageFromNasa key={item.id} image={item}>
+          {/* <img
             className="image__image"
             alt={item.camera.full_name}
             src={item.img_src}
-          />
+          /> */}
         </ImageFromNasa>
       ))}
     </div>

@@ -6,4 +6,9 @@
   min-width: 75%;
   min-height: 75%;
   border: 1px solid green;
+  display: none;
+}
+
+.popup_opened {
+  display: flex;
 }
